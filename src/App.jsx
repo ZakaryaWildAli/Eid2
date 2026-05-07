@@ -7,34 +7,34 @@ const mediaUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, ""
 
 const normalStages = [
   {
-    image: mediaUrl("images/step-1.jpg"),
+    image: mediaUrl("images/step-1-v3.jpg"),
     text: "هلووو سما",
     button: "هلووو",
   },
   {
-    image: mediaUrl("images/step-2.jpg"),
+    image: mediaUrl("images/step-2-v3.jpg"),
     text: "سما عندي الك سؤال",
     button: "ايش هو؟",
   },
   {
-    image: mediaUrl("images/step-3.jpg"),
+    image: mediaUrl("images/step-3-v3.jpg"),
     text: "بس خجلان اسألك اياه😥",
     button: "اسألينييي",
   },
   {
-    image: mediaUrl("images/step-4.jpg"),
+    image: mediaUrl("images/step-4-v3.jpg"),
     text: "بتحبي زكريا ولا لاااا؟",
     button: "ها؟🤭",
   },
   {
-    image: mediaUrl("images/step-5.jpg"),
+    image: mediaUrl("images/step-5-v3.jpg"),
     text: "شو هااا 😠 بتحبي زكريا ولا لاا؟",
     button: "اندااري🤗",
   },
 ];
 
 const crackStage = {
-  image: mediaUrl("images/step-6.jpg"),
+  image: mediaUrl("images/step-6-v3.jpg"),
   text: "اذا بتحبي زكريا اكسري القلب 🥺",
   button: "اندااري🤗",
 };
