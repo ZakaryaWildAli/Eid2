@@ -3,58 +3,60 @@ import gsap from "gsap";
 import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+const mediaUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 const normalStages = [
   {
-    image: "/images/step-1.jpg",
+    image: mediaUrl("images/step-1.jpg"),
     text: "هلووو سما",
     button: "هلووو",
   },
   {
-    image: "/images/step-2.jpg",
+    image: mediaUrl("images/step-2.jpg"),
     text: "سما عندي الك سؤال",
     button: "ايش هو؟",
   },
   {
-    image: "/images/step-3.jpg",
+    image: mediaUrl("images/step-3.jpg"),
     text: "بس خجلان اسألك اياه😥",
     button: "اسألينييي",
   },
   {
-    image: "/images/step-4.jpg",
+    image: mediaUrl("images/step-4.jpg"),
     text: "بتحبي زكريا ولا لاااا؟",
     button: "ها؟🤭",
   },
   {
-    image: "/images/step-5.jpg",
+    image: mediaUrl("images/step-5.jpg"),
     text: "شو هااا 😠 بتحبي زكريا ولا لاا؟",
     button: "اندااري🤗",
   },
 ];
 
 const crackStage = {
-  image: "/images/step-6.jpg",
+  image: mediaUrl("images/step-6.jpg"),
   text: "اذا بتحبي زكريا اكسري القلب 🥺",
   button: "اندااري🤗",
 };
 
 const surpriseStage = {
-  image: "/images/surprise-step.jpg",
+  image: mediaUrl("images/surprise-step.jpg"),
   text: "كل عام وكل سنه وانتي معاي وبحبك اليوم وبكرة والي بعده وطول العمر 🤍💕👨‍❤️‍💋‍👨",
   button: "بعشقكك وبحبك يا عسل 🥺🤍",
 };
 
 const finalCard = {
   title: "اغنيتنا المفضلة 🎵",
-  image: "/images/final-card.jpg",
-  audio: "/audio/eid-song.mp3.mp3",
+  image: mediaUrl("images/final-card.jpg"),
+  audio: mediaUrl("audio/eid-song.mp3.mp3"),
 };
 
 /** أربع صور في `public/hearts/` — 3 ضغطات، ثم الثالثة تعرض الرابعة بعد 3 ثوانٍ */
 const crackStageHeartBackgrounds = [
-  "/hearts/heart-1.png",
-  "/hearts/heart-2.png",
-  "/hearts/heart-3.png",
-  "/hearts/heart-4.png",
+  mediaUrl("hearts/heart-1.png"),
+  mediaUrl("hearts/heart-2.png"),
+  mediaUrl("hearts/heart-3.png"),
+  mediaUrl("hearts/heart-4.png"),
 ];
 
 function Typewriter({ text, activeKey }) {
